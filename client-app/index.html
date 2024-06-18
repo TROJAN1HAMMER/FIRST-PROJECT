@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Hospital</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="icon" href="Asserts/Images/Untitled design.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            background: black;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            margin-top: 20px;
+        }
+
+        nav ul li .glowing-btn {
+            position: relative;
+            color: var(--glow-color);
+            cursor: pointer;
+            padding: 0.35em 1em;
+            border: 0.15em solid var(--glow-color);
+            border-radius: 0.45em;
+            background: none;
+            perspective: 2em;
+            font-family: "Raleway", sans-serif;
+            font-size: 10px; /* Smaller text size */
+            font-weight: 900;
+            letter-spacing: 0.1em; /* Reduced letter spacing */
+            box-shadow: inset 0px 0px 0.5em 0px var(--glow-color), 0px 0px 0.5em 0px var(--glow-color);
+        }
+        nav ul li .glowing-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.7;
+            filter: blur(1em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            pointer-events: none;
+        }
+        nav ul li .glowing-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 2em 0.2em var(--glow-color);
+            transition: opacity 100ms linear;
+        }
+        nav ul li .glowing-btn:hover {
+            color: rgba(0, 0, 0, 0.8);
+        }
+        nav ul li .glowing-btn:hover:before {
+            filter: blur(1.5em);
+            opacity: 1;
+        }
+        nav ul li .glowing-btn:hover:after {
+            opacity: 1;
+        }
+        @media only screen and (max-width: 600px) {
+            nav ul li .glowing-btn {
+                font-size: 0.8em;
+                letter-spacing: 0.05em;
+            }
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            font-family: cursive;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        :root {
+            --glow-color: hsl(186 100% 69%);
+        }
+
+        .containers {
+            margin: 10px;
+        }
+
+        .search {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search form {
+            position: relative;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+
+        .search form input {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #fff;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .search form input::placeholder {
+            color: #fff;
+            opacity: 0.7;
+        }
+
+        .search form .material-symbols-outlined {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        background-size: cover;
+        font-family: sans-serif;
+        }
+
+        .login-wrapper {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .form {
+        position: relative;
+        width: 100%;
+        max-width: 380px;
+        padding: 80px 40px 40px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.08);
+        transform: skewX(-26deg);
+        transform-origin: bottom left;
+        border-radius: 10px;
+        pointer-events: none;
+        }
+
+        .form img {
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 50px);
+        width: 100px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        }
+
+        .form h2 {
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+        color: white;
+        }
+
+        .form .input-group {
+        position: relative;
+        }
+
+        .form .input-group input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background-color: transparent;
+        color: inherit;
+        }
+
+        .form .input-group label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 1rem;
+        pointer-events: none;
+        transition: 0.3s ease-out;
+        }
+
+        .form .input-group input:focus + label,
+        .form .input-group input:valid + label {
+        transform: translateY(-18px);
+        color: white;
+        font-size: 0.8rem;
+        }
+
+        .submit-btn {
+        display: block;
+        margin-left: auto;
+        border: none;
+        outline: none;
+        background: #ff652f;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .forgot-pw {
+        color: inherit;
+        }
+
+        #forgot-pw {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        z-index: 1;
+        background: #fff;
+        opacity: 0;
+        transition: 0.6s;
+        }
+        #forgot-pw:target {
+        height: 100%;
+        opacity: 1;
+        }
+        .close {
+        position: absolute;
+        right: 1.5rem;
+        top: 0.5rem;
+        font-size: 2rem;
+        font-weight: 900;
+        text-decoration: none;
+        color: inherit;
+        }
+
+        .lists {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+        }
+
+        .box {
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        }
+
+        .box img {
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        }
+
+        .box p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header> <!--Title Bars-->
+        <div class="container">
+            <h1>Welcome to ABC Hospital</h1>
+            <nav>
+                <ul>
+                    <li><button class="glowing-btn">HOME</button></li>
+                    <li><button class="glowing-btn">BOOK APPOINTMENT</button></li>
+                    <li><button class="glowing-btn">SERVICES</button></li>
+                    <li><button class="glowing-btn">ABOUT US</button></li>
+                    <li><button class="glowing-btn">CONTACT</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header><!--Title Bars End-->
+    <hr> <!-- Horizontal line below the search bar -->
+
+    <div class="containers"><!--Search Bar-->
+        <div class="search">
+            <form action="">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" name="search" id="search" placeholder="Search Here">
+            </form>
+        </div>
+    </div><!--Search Bar Ends-->
+
+    <div class="lists"><!--List of Options-->
+        <div class="box">
+          <img src="Asserts/Images/checklist-icon.png" alt="Book Appointment">
+          <p>Book Appointment</p>
+        </div>
+      
+        <div class="box">
+          <img src="Asserts/Images/healthcare-icon.png" alt="Consult Online">
+          <p>Consult Online</p>
+        </div>
+      
+        <div class="box">
+          <img src="Asserts/Images/medicine-icon.png" alt="Buy Medicine">
+          <p>Buy Medicine</p>
+        </div>
+      
+        <div class="box">
+          <img src="Asserts/Images/hospital-clinic-icon.png" alt="Find Hospital">
+          <p>Find Hospitals</p>
+        </div>
+    </div><!--List of Options Ends-->
+
+    <hr><hr> <!-- Horizontal line below the List -->
+
+    <div class="login-wrapper"> <!--Login Page-->
+        <form action="" class="form">
+          <h2>Login</h2>
+          <div class="input-group">
+            <input type="text" name="loginUser" id="loginUser" required />
+            <label for="loginUser">User Name</label>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              name="loginPassword"
+              id="loginPassword"
+              required
+            />
+            <label for="loginPassword">Password</label>
+          </div>
+          <input type="submit" value="Login" class="submit-btn" />
+        </form>
+      </div><!--Login Page Ends-->
+
+
+    <footer>
+        <p>&copy; Contact the Admin</p>
+    </footer>
+</body>
+</html>
