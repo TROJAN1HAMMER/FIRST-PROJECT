@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Hospital</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="icon" href="Asserts/Images/Untitled design.jpg">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header> <!--Navigation Bars-->
+        <div class="container">
+            <h1>Welcome to ABC Hospital</h1>
+            <nav>
+                <ul>
+                    <li><button class="glowing-btn">HOME</button></li>
+                    <li><button class="glowing-btn">BOOK APPOINTMENT</button></li>
+                    <li><button class="glowing-btn">SERVICES</button></li>
+                    <li><button class="glowing-btn">ABOUT US</button></li>
+                    <li><button class="glowing-btn">CONTACT</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header><!--Navigation Bars End-->
+
+    
+    <hr> <!-- Horizontal line below the search bar -->
+
+    <div class="containers"><!--Search Bar-->
+        <div class="search">
+            <form action="">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" name="search" id="search" placeholder="Search Here">
+            </form>
+        </div>
+    </div><!--Search Bar Ends-->
+
+    <div class="lists"><!--List of Options-->
+        <div class="box">
+          <img src="Asserts/Images/checklist-icon.png" alt="Book Appointment">
+          <p>Book Appointment</p>
+        </div>
+      
+        <div class="box">
+          <img src="Asserts/Images/healthcare-icon.png" alt="Consult Online">
+          <p>Consult Online</p>
+        </div>
+      
+        <div class="box">
+          <img src="Asserts/Images/medicine-icon.png" alt="Buy Medicine">
+          <p>Buy Medicine</p>
+        </div>
+      
+        <div class="box">
+          <img src="Asserts/Images/hospital-clinic-icon.png" alt="Find Hospital">
+          <p>Find Hospitals</p>
+        </div>
+    </div><!--List of Options Ends-->
+
+    <hr><hr> <!-- Horizontal line below the List -->
+
+    <div class="login-wrapper"> <!--Login Page-->
+        <form action="" class="form">
+          <h2>Login</h2>
+          <div class="input-group">
+            <input type="text" name="loginUser" id="loginUser" required />
+            <label for="loginUser">User Name</label>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              name="loginPassword"
+              id="loginPassword"
+              required
+            />
+            <label for="loginPassword">Password</label>
+          </div>
+          <input type="submit" value="Login" class="submit-btn" />
+        </form>
+      </div><!--Login Page Ends-->
+
+
+    <footer>
+        <p>&copy; Contact the Admin</p>
+    </footer>
+</body>
+</html>
