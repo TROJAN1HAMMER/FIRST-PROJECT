@@ -403,6 +403,7 @@ section {
   height: 100vh;
   background: url(../img/herobg.jpg) top center no-repeat;
   background-size: cover;
+  
 }
 
 .hero h1 {
@@ -490,6 +491,7 @@ section {
 
   .hero .hero-img img {
     width: 80%;
+    height: 100%;
   }
 }
 
@@ -510,6 +512,13 @@ section {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Index Page
@@ -1094,7 +1103,7 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #012970;
+  color: #0046be;
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
@@ -1109,20 +1118,20 @@ section {
 .footer .footer-top .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
+  color: #0046be;
   line-height: 0;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .footer-top .social-links a:hover {
-  color: #012970;
+  color: hsl(186 100% 69%);
 }
 
 .footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #012970;
+  color: #0046be;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
@@ -1156,14 +1165,14 @@ section {
 }
 
 .footer .footer-top .footer-links ul a {
-  color: #013289;
+  color: #0046be;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-top .footer-links ul a:hover {
-  color: #4154f1;
+  color: hsl(186 100% 69%);
 }
 
 .footer .footer-top .footer-contact p {
@@ -1173,13 +1182,13 @@ section {
 .footer .copyright {
   text-align: center;
   padding-top: 30px;
-  color: #012970;
+  color: #0046be;
 }
 
 .footer .credits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #012970;
+  color: #0046be;
 }
 
